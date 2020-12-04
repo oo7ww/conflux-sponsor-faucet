@@ -217,7 +217,7 @@ contract SponsorFaucet is
      * @param dapp contract address
      */
     function isLargeContract(address dapp) public view returns (bool) {
-        return large_contracts[dapp];
+        return large_contracts[dapp] || dapp == large;
     }
 
     /**
